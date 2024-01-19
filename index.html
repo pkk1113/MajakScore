@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리치 마작 부수 계산기</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <p>리치마작 부수 계산기</p>
+        </div>
+        <div class="result">
+            <span>40부(36부)</span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- <div class="options first">
+            <div class="radios">
+                <input type="radio" name="cry" id="cry1" value="1">
+                <label for="cry1">치</label>
+                <input type="radio" name="cry" id="cry2" value="2">
+                <label for="cry2">뻥</label>
+                <input type="radio" name="cry" id="cry3" value="3">
+                <label for="cry3">깡</label>
+            </div>
+            <div class="radios">
+                <input type="radio" name="ready" id="ready1" value="1" checked="true" required="true">
+                <label for="ready1">양면</label>
+                <input type="radio" name="ready" id="ready2" value="2">
+                <label for="ready2">나머지</label>
+            </div>
+        </div> -->
+        <div class="options second">
+            <!-- 대기 -->
+            <div class="radios">
+                <input type="radio" name="ready" id="ready1" value="1" checked="true" required="true">
+                <label for="ready1">양면</label>
+                <input type="radio" name="ready" id="ready2" value="2">
+                <label for="ready2">나머지</label>
+            </div>
+            <!-- 울기 -->
+            <div class="radios">
+                <input type="radio" name="cry" id="cry1" value="1">
+                <label for="cry1">치</label>
+                <input type="radio" name="cry" id="cry2" value="2">
+                <label for="cry2">뻥</label>
+                <input type="radio" name="cry" id="cry3" value="3">
+                <label for="cry3">깡</label>
+                <input type="radio" name="cry" id="cry4" value="4">
+                <label for="cry4">안깡</label>
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="row man">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+                <div class="card">7</div>
+                <div class="card">8</div>
+                <div class="card">9</div>
+            </div>
+            <div class="row tong">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+                <div class="card">7</div>
+                <div class="card">8</div>
+                <div class="card">9</div>
+            </div>
+            <div class="row sak">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+                <div class="card">7</div>
+                <div class="card">8</div>
+                <div class="card">9</div>
+            </div>
+            <div class="row">
+                <div class="card empty"></div>
+                <div class="card">東</div>
+                <div class="card">南</div>
+                <div class="card">西</div>
+                <div class="card">北</div>
+                <div class="card baek">白</div>
+                <div class="card bal">發</div>
+                <div class="card jung">中</div>
+                <div class="card empty"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
