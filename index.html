@@ -2,102 +2,114 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>리치 마작 부수 계산기</title>
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <div class="container">
-        <div class="top">
-            <p>리치마작 부수 계산기</p>
-        </div>
-        <div class="result">
-            <span>40부(36부)</span>
-            <span></span>
-            <span></span>
-        </div>
-        <!-- <div class="options first">
-            <div class="radios">
-                <input type="radio" name="cry" id="cry1" value="1">
-                <label for="cry1">치</label>
-                <input type="radio" name="cry" id="cry2" value="2">
-                <label for="cry2">뻥</label>
-                <input type="radio" name="cry" id="cry3" value="3">
-                <label for="cry3">깡</label>
-            </div>
-            <div class="radios">
-                <input type="radio" name="ready" id="ready1" value="1" checked="true" required="true">
-                <label for="ready1">양면</label>
-                <input type="radio" name="ready" id="ready2" value="2">
-                <label for="ready2">나머지</label>
-            </div>
-        </div> -->
-        <div class="options second">
-            <!-- 대기 -->
-            <div class="radios">
-                <input type="radio" name="ready" id="ready1" value="1" checked="true" required="true">
-                <label for="ready1">양면</label>
-                <input type="radio" name="ready" id="ready2" value="2">
-                <label for="ready2">나머지</label>
-            </div>
-            <!-- 울기 -->
-            <div class="radios">
-                <input type="radio" name="cry" id="cry1" value="1">
-                <label for="cry1">치</label>
-                <input type="radio" name="cry" id="cry2" value="2">
-                <label for="cry2">뻥</label>
-                <input type="radio" name="cry" id="cry3" value="3">
-                <label for="cry3">깡</label>
-                <input type="radio" name="cry" id="cry4" value="4">
-                <label for="cry4">안깡</label>
-            </div>
+        <header class="column">리치 계산기</header>
+        <div class="location">
+            <div class="location_hand"></div>
+            <div class="location_fiend"></div>
         </div>
         <div class="keyboard">
-            <div class="row man">
-                <div class="card">1</div>
-                <div class="card">2</div>
-                <div class="card">3</div>
-                <div class="card">4</div>
-                <div class="card">5</div>
-                <div class="card">6</div>
-                <div class="card">7</div>
-                <div class="card">8</div>
-                <div class="card">9</div>
+            <div class="radios_row_karyo radios_row">
+                <div class="radios">
+                    <input type="radio" name="radios_karyo" id="radio_karyo_tsumo" checked="true">
+                    <label for="radio_karyo_tsumo">쯔모</label>
+                    <input type="radio" name="radios_karyo" id="radio_karyo_ron">
+                    <label for="radio_karyo_ron">론</label>
+                </div>
+                <div class="radios">
+                    <input type="radio" name="radios_ready" id="radio_ready_ryomen" checked="true">
+                    <label for="radio_ready_ryomen">양면</label>
+                    <input type="radio" name="radios_ready" id="radio_ready_tanki">
+                    <label for="radio_ready_tanki">단기</label>
+                    <input type="radio" name="radios_ready" id="radio_ready_kan">
+                    <label for="radio_ready_kan">간짱</label>
+                    <input type="radio" name="radios_ready" id="radio_ready_hen">
+                    <label for="radio_ready_hen">변짱</label>
+                    <input type="radio" name="radios_ready" id="radio_ready_syabo">
+                    <label for="radio_ready_syabo">샤보</label>
+                </div>
             </div>
-            <div class="row tong">
-                <div class="card">1</div>
-                <div class="card">2</div>
-                <div class="card">3</div>
-                <div class="card">4</div>
-                <div class="card">5</div>
-                <div class="card">6</div>
-                <div class="card">7</div>
-                <div class="card">8</div>
-                <div class="card">9</div>
+            <div class="radios_row_location radios_row">
+                <div class="radios_location radios">
+                    <input type="radio" name="radios_location" id="radio_location_hand" checked="true">
+                    <label for="radio_location_hand">손</label>
+                    <input type="radio" name="radios_location" id="radio_location_field">
+                    <label for="radio_location_field">바닥</label>
+                </div>
+                <div class="radios_combination radios">
+                    <input type="radio" name="radio_combination" id="radio_combination_head" checked="true">
+                    <label for="radio_combination_head">머리</label>
+                    <input type="radio" name="radio_combination" id="radio_combination_syuntsu" checked="true">
+                    <label for="radio_combination_syuntsu">쓘쯔</label>
+                    <input type="radio" name="radio_combination" id="radio_combination_kotsu">
+                    <label for="radio_combination_kotsu">커쯔</label>
+                </div>
+                <div class="radios_field radios display_none">
+                    <input type="radio" name="radios_field" id="radio_field_chi" checked="true">
+                    <label for="radio_field_chi">치</label>
+                    <input type="radio" name="radios_field" id="radio_field_pong">
+                    <label for="radio_field_pong">뻥</label>
+                    <input type="radio" name="radios_field" id="radio_field_kan">
+                    <label for="radio_field_kan">깡</label>
+                    <input type="radio" name="radios_field" id="radio_field_yamikan">
+                    <label for="radio_field_yamikan">안깡</label>
+                </div>
             </div>
-            <div class="row sak">
-                <div class="card">1</div>
-                <div class="card">2</div>
-                <div class="card">3</div>
-                <div class="card">4</div>
-                <div class="card">5</div>
-                <div class="card">6</div>
-                <div class="card">7</div>
-                <div class="card">8</div>
-                <div class="card">9</div>
+            <div class="cards">
+                <div class="cards_row">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+                <div class="cards_row">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+                <div class="cards_row">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+                <div class="cards_row">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
             </div>
-            <div class="row">
-                <div class="card empty"></div>
-                <div class="card">東</div>
-                <div class="card">南</div>
-                <div class="card">西</div>
-                <div class="card">北</div>
-                <div class="card baek">白</div>
-                <div class="card bal">發</div>
-                <div class="card jung">中</div>
-                <div class="card empty"></div>
+            <div class="buttons">
+                <div class="button" id="button_reset">리셋</div>
+                <div class="button button__highlighted" id="button_calculation">계산하기</div>
+                <div class="button" id="button_cancel">취소</div>
             </div>
-        </div>
+        </div>    
     </div>
     <script src="./main.js"></script>
 </body>
